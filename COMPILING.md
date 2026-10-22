@@ -101,6 +101,7 @@ Run these commands from the repository root. `AUX_DATA` is optional when you onl
 
 ```sh
 cmake -S Projects -B Build \
+  -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
   -DCMAKE_BUILD_TYPE=RelWithDebInfo \
   -DBUILD_OGDA=OFF
 cmake --build Build --parallel "$(nproc)"

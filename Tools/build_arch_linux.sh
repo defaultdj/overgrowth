@@ -91,6 +91,7 @@ else
 fi
 
 cmake -S "${repo_root}/Projects" -B "$build_dir" \
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DBUILD_OVERGROWTH=ON \
     -DBUILD_OGDA=OFF \
