@@ -27,6 +27,10 @@
 #pragma GCC diagnostic ignored "-Wunused-local-typedefs"
 #endif
 
+// GLM 0.9.4.2's GCC detection can misidentify standard -std=c++11 mode as
+// C++98 on modern compilers. Force its C++11 swizzle implementation; the
+// legacy C++98 methods reference nonexistent tvec3 components.
+#define GLM_FORCE_CXX11
 #define GLM_SWIZZLE
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
